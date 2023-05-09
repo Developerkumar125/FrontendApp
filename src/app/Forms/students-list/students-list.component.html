@@ -1,0 +1,202 @@
+  <!-- Preloader -->
+
+    <app-header></app-header>
+
+
+<div class="content-wrapper" style="min-height: 1302.12px;">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Students List</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Students List</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary" style="width: 1622px;">
+              <div class="card-header">
+                <h3 class="card-title">Filter by class</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                    <div class="row">
+
+                        <div class="col-lg-3">
+                        <div class="form-group">
+                            
+                            <label for="exampleInputEmail1">Classes</label>
+                                
+                                <select  class="form-control" name="classnmae" [(ngModel)]="classname">
+                          <option value="class-1">class 1</option>
+                          <option value="class-2">class 2</option>
+                          <option value="class-3">class 3</option>
+                          <option value="class-4">class 4</option>
+                          <option value="class-5">class 5</option>
+                          <option value="class-6">class 6</option>
+                          <option value="class-7">class 7</option>
+                          <option value="class-8">class 8</option>
+                          <option value="class-9">class 9</option>
+                          <option value="class-10">class 10</option>
+</select> 
+                            </div>
+                        </div>
+                         <div class="col-lg-3">
+                        <div class="form-group">
+                            
+                            <label for="exampleInputEmail1">Admission Number</label>
+                                
+                                <input type="text" class="form-control" id="exampleInputEmail1"  name="admissionnumber"   [(ngModel)]="admissionnumber" placeholder="Admission Number">
+                            </div>
+                            
+                        </div>
+                           <div class="col-lg-3">
+                        <div class="form-group">
+                            
+                            <label for="exampleInputEmail1">Search By Name</label>
+                                
+                                <input type="admib" class="form-control" id="exampleInputEmail1" placeholder="Search By Name">
+                            </div>
+                            
+                        </div>
+                           
+                        </div>
+                   
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary"      class="btn btn-outline-secondary"
+          type="button"
+          (click)="searchClass()" >Search</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+            <!-- general form elements -->
+           
+            <!-- /.card -->
+
+            <!-- Input addon -->
+        
+            <!-- /.card -->
+            <!-- Horizontal Form -->
+            
+            <!-- /.card -->
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+    
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        
+        <!-- /.row -->
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Total Students List</h3>
+
+                <div class="card-tools">
+                  <button class="m-3 btn btn-sm btn-danger" (click)="removeAllTutorials()">
+       Remove All
+     </button>
+             
+                </div>
+              </div>
+
+
+              <!-- /.card-header -->
+              <div class="card-body table-responsive p-0" >
+                                <table class="table table-hover text-nowrap">
+                  <thead >
+                    <tr>
+                      <th>ID</th>
+                      <th>Admission Number</th>
+                      <th>rollnumber</th>
+                      <th>Class or Group</th>
+                      <th>section</th>
+                      <th>FirstName</th>
+                      <th>LastName</th>
+                      <th>Gender</th>
+                      <th>Date Of Birth</th>
+                      <th>MobileNumber</th>
+                      <th>Date of Join </th>
+                      <th>Blood Group</th>
+                      <th>Edit</th>
+                      <th>Delete  </th>
+                    </tr>
+                  </thead>
+                  <tbody   *ngFor="let tutorial of tutorials; let i = index"
+        [class.active]="i == currentIndex"
+        (click)="setActiveTutorial(tutorial, i)">
+                    <tr>
+                      <td>{{ tutorial.id}}</td>
+                     <td>{{ tutorial.admissionnumber}}</td>
+                     <td>{{ tutorial.rollnumber}}</td>
+
+                     <td>{{ tutorial.classname}}</td>
+                     <td>{{ tutorial.section}}</td>
+                     <td>{{ tutorial.fristname}}</td>
+                     <td>{{ tutorial.lastname}}</td>
+                     <td>{{ tutorial.gender}}</td>
+                     <td>{{ tutorial.dateofbirth}}</td>
+                     <td>{{ tutorial.mobilenumber}}</td>
+                     <td>{{ tutorial.admissiondate}}</td>
+                     <td>{{ tutorial.bloodgroup}}</td>
+
+
+
+
+
+                      <td><i class="fa fa-fw fa-edit" style="width: 10px;" routerLink="/dashboard/students-edit/{{ tutorial.id }}"></i></td>
+
+                      <td>
+
+                        <i class="fas fa-trash-alt" style="width: 10px;"  (click)="deleteTutorial()"  ></i></td>
+
+                    </tr>
+                  
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+        </div>
+        <!-- /.row -->
+        
+        <!-- /.row -->
+     
+        <!-- /.row -->
+     
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <router-outlet></router-outlet>

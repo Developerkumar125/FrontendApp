@@ -1,0 +1,337 @@
+<app-header></app-header>
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Student Form</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Student Form</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary" style="width: 1622px;"  *ngIf="currentTutorial.id">
+              <div class="card-header">
+                <h3 class="card-title">Registration Update Form</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                  <button id="pdfButton" routerLink="/dashboard/student/pdf"><b>Click here to Generate PDF</b></button>
+                    <div class="row">
+
+                        <div class="col-lg-3">
+                        <div class="form-group" *ngIf="currentTutorial.id">
+                            
+                            <label for="admissionnumber">Admission Number</label>
+                                
+                                <input type="text" class="form-control" id="admissionnumber" placeholder="Admission Number" required  [(ngModel)]="currentTutorial.admissionnumber" name="admissionnumber">
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                        <div class="form-group">
+                            
+                            <label for="rollnumber">Roll number</label>
+                                
+                                <input type="text" class="form-control" id="rollnumber" placeholder="Roll number"   [(ngModel)]="currentTutorial.rollnumber" name="rollnumber">
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                        <div class="form-group"   [(ngModel)]="currentTutorial.classname">
+                            
+                            <label for="class">Class</label>
+                                <select class="form-control" name="classname"  [(ngModel)]="currentTutorial.classname"> 
+                          <option value="class-1" >class 1</option>
+                          <option  value="class-2" >class 2</option>
+                          <option  value="class-3" >class 3</option>
+                          <option  value="class-4" >class 4</option>
+                          <option  value="class-5" >class 5</option>
+                          <option  value="class-6" >class 6</option>
+                          <option  value="class-7" >class 7</option>
+                          <option  value="class-8" >class 8</option>
+                          <option  value="class-9" >class 9</option>
+                          <option  value="class-10" >class 10</option>
+
+
+
+
+
+                        </select>
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                         <div class="form-group"  >
+                            
+                            <label for="section" >Section</label>
+                                <select class="form-control" name="section"  [(ngModel)]="currentTutorial.section">
+                          <option value="class-A">1</option>
+                          <option value="class-B"> 2</option>
+                          <option value="class-C">3</option>
+                          <option value="class-D">4</option>
+                          <option value="class-E"> 5</option>
+                        </select>
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                         <div class="form-group">
+                            
+                            <label for="fristname">First Name</label>
+                                
+                                <input type="text" class="form-control" id="fristname" placeholder="First Name"  [(ngModel)]="currentTutorial.fristname" name="fristname">
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                         <div class="form-group">
+                            
+                            <label for="lastname">Last Name</label>
+                                
+                                <input type="text" class="form-control" id="lastname" placeholder="Last Name"  [(ngModel)]="currentTutorial.lastname" name="lastname">
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                        <div class="form-group" >
+                            
+                            <label for="gender">Gender</label>
+                                <select class="form-control" name="gender"  [(ngModel)]="currentTutorial.gender">
+                          <option value = "M">Male</option>
+                          <option value="F">FeMale</option>
+                         
+                        </select>
+                        </div>
+                        </div>
+                                                <div class="col-lg-3">
+                        
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Date of birth</label>
+                                
+                         <div class="input-group date" id="reservationdatetime" data-target-input="nearest">
+ <input type="date" class="form-control datepicker-input" data-target="#reservationdate" [(ngModel)]="currentTutorial.dateofbirth" name="dateofbirth"/>
+                        <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                        </div>
+                    </div>
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                         <div class="form-group">
+                            <label for="category" >Category</label>
+                                <select class="form-control" name="category" [(ngModel)]="currentTutorial.category">
+                          <option value="BC">BC</option>
+                          <option value="BC-D">BC- D</option>
+                          <option value="OC">OC</option>
+                          <option value="SC">SC</option>
+                          <option value="ST">ST</option>
+                          <option value="OBC">OBC</option>
+
+                        </select>
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                         <div class="form-group">
+                            <label for="mobilenumber">Mobile Number</label>
+                                
+                                <input type="text" class="form-control" id="mobilenumber" placeholder="Mobile Number"  [(ngModel)]="currentTutorial.mobilenumber" name="mobilenumber">
+                            </div>
+                        </div>
+              <div class="col-lg-3">
+
+                         <div class="form-group">
+                            <label for="email">Email</label>
+                                
+                                <input type="text" class="form-control" id="email" placeholder="Email"  [(ngModel)]="currentTutorial.email" name="email">
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                         <div class="form-group">
+                            <label for="bloodgroup">blood group</label>
+                                
+                                <input type="text" class="form-control" id="bloodgroup" placeholder="bloodgroup" [(ngModel)]="currentTutorial.bloodgroup" name="bloodgroup">
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+
+                         <div class="form-group">
+                            <label for="admissiondate">Date of joining</label>
+                            <input type="date" class="form-control datepicker-input" data-target="#reservationdate"  id="admissiondate" placeholder="Date Of Join" name="admissiondate" [(ngModel)]="currentTutorial.admissiondate">
+                            <div class="input-group-append" data-target="#reservationdatetime" data-toggle="datetimepicker">
+                              </div>  
+                            </div>
+                        </div>
+                                                <div class="col-lg-3">
+                       
+                        <div class="form-group">
+                            <label for="exampleInputFile">Image</label>
+                            <div class="input-group">
+                                <div class="custom-file">
+                                        
+                                        <input type="file" class="custom-file-input" id="exampleInputFile">
+                                        <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                                    </div>
+                                </div>
+                              
+                            </div>
+                            </div>
+                           
+                        </div>
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit"   (click)="updateTutorial()" class="btn btn-primary">Update</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+            <!-- general form elements -->
+           
+            <!-- /.card -->
+
+            <!-- Input addon -->
+        
+            <!-- /.card -->
+            <!-- Horizontal Form -->
+            
+            <!-- /.card -->
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+    
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+      <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- left column -->
+          <div class="col-md-6">
+            <!-- general form elements -->
+            <div class="card card-primary" style="width: 1622px;">
+              <div class="card-header">
+                <h3 class="card-title">Fees</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form>
+                <div class="card-body">
+                    <div class="row">
+                                          <div class="col-lg-3">
+
+                        <div class="form-group">
+                            
+                            <label for="exampleInputEmail1">Class</label>
+                                <select class="form-control">
+                      
+
+                          <option>class 1</option>
+                          <option>class 2</option>
+                          <option>class 3</option>
+                          <option>class 4</option>
+                          <option>class 5</option>
+                        </select>
+                            </div>
+                        </div>
+
+                                        <div class="col-md-6">
+
+                         <div class="form-group">
+                            <label for="exampleInputPassword1">Fee Details</label>
+                          
+ <div class="card-body table-responsive p-0">
+                <table class="table table-hover text-nowrap">
+                  <thead>
+                    <tr>
+                      <th>Section</th>
+                      <th>Fee</th>
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Admission Fee </td>
+                      <td>1000</td>
+                    
+                    </tr>
+                    <tr>
+                      <td>School Fee</td>
+                      <td>1500</td>
+                    
+                    </tr>
+                    <tr>
+                      <td>Bus Fee</td>
+                      <td>2500</td>
+                     
+                    </tr>
+                    <tr>
+                      <td>Books Fee</td>
+                      <td>15000</td>
+                    
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+                     
+                            </div>
+                        </div>
+                      </div>  
+                </div>
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+
+            <!-- general form elements -->
+           
+            <!-- /.card -->
+
+            <!-- Input addon -->
+        
+            <!-- /.card -->
+            <!-- Horizontal Form -->
+            
+            <!-- /.card -->
+
+          </div>
+          <!--/.col (left) -->
+          <!-- right column -->
+    
+          <!--/.col (right) -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <router-outlet></router-outlet>
