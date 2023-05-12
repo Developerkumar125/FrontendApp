@@ -5,9 +5,9 @@ import { Students } from '../models/students.model';
 import { Attendence } from '../models/attendence.model';
 import { FeeDetails } from '../models/feeDetails.model';
 
-const baseUrl = 'https://backend-begmomb2s-developerkumar125.vercel.app/api/';
-const baseUrl2 = 'https://backend-begmomb2s-developerkumar125.vercel.app/attendence';
-const baseUr3 = 'https://backend-begmomb2s-developerkumar125.vercel.app/fee'
+const baseUrl = 'https://backend-begmomb2s-developerkumar125.vercel.app/api';
+const baseUrl2 = 'https://backend-begmomb2s-developerkumar125.vercel.app/api/attendence';
+const baseUr3 = 'https://backend-begmomb2s-developerkumar125.vercel.app/api/fee'
 
 @Injectable({
   providedIn: 'root'
