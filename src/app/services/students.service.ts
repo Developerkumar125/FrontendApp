@@ -5,9 +5,9 @@ import { Students } from '../models/students.model';
 import { Attendence } from '../models/attendence.model';
 import { FeeDetails } from '../models/feeDetails.model';
 
-const baseUrl = 'https://schoolapp-y6um.onrender.com/api';
-const baseUrl2 = 'https://schoolapp-y6um.onrender.com/api/attendence';
-const baseUr3 = 'https://schoolapp-y6um.onrender.com/api/fee'
+const baseUrl = 'https://schoolmanagement-1jug.onrender.com/api';
+const baseUrl2 = 'https://schoolmanagement-1jug.onrender.com/api/attendence';
+const baseUr3 = 'https://schoolmanagement-1jug.onrender.com/api/fee'
 
 @Injectable({
   providedIn: 'root'
