@@ -12,7 +12,7 @@ export class AddorEditComponent implements OnInit{
   tutorial = {
     admissionnumber: '',
     rollnumber: '',
-    class:'',
+    classname:'',
     section:'',
     fristname:'',
     lastname:'',
@@ -37,7 +37,7 @@ export class AddorEditComponent implements OnInit{
     const data = {
       admissionnumber: this.tutorial.admissionnumber,
       rollnumber: this.tutorial.rollnumber,
-      class: this.tutorial.class,
+      classname: this.tutorial.classname,
       section: this.tutorial.section,
       fristname: this.tutorial.fristname,
       lastname: this.tutorial.lastname,
