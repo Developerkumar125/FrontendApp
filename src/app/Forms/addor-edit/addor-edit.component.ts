@@ -69,7 +69,7 @@ export class AddorEditComponent implements OnInit{
     this.tutorial = {
       admissionnumber: '',
       rollnumber: '',
-      class:'',
+      classname:'',
       section:'',
       fristname:'',
       lastname:'',
