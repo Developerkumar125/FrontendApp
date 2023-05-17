@@ -4,7 +4,7 @@ export class Students {
   rollnumber?: string;
   classname?: string;
   section?:string;
-  fristname?:string;
+  firstname?:string;
   lastname?:string;
   gender?:string;
   dateofbirth?:string;
