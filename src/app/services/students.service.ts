@@ -49,12 +49,13 @@ deleteAll(): Observable<any> {
   return this.http.delete(baseUrl);
 }
 
- findByTitle(classname:any,admissionnumber:any): Observable<any[]> {
-    return this.http.get<any[]>(`${baseUrl}?classname=${classname}`).pipe(
-    switchMap(data1 => {
-      return this.http.get<any[]>(`${baseUrl}?admissionnumber=${admissionnumber}`);
-    })
-  );
+ findByTitle(classname:any): Observable<any[]> {
+    return this.http.get<any[]>(`${baseUrl}?classname=${classname}`)
+  //   .pipe(
+  //   switchMap(data1 => {
+  //     return this.http.get<any[]>(`${baseUrl}?admissionnumber=${admissionnumber}`);
+  //   })
+  // );
   }
 
   getAllAttendence(): Observable<Attendence[]> {

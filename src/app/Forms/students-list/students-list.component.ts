@@ -75,7 +75,7 @@ currentTutorial: Students = {};
 
  
   searchClass() {
-    this.studentsService.findByTitle(this.classname,this.admissionnumber)
+    this.studentsService.findByTitle(this.classname,)
       .subscribe(
         data => {
           this.tutorials = data;
