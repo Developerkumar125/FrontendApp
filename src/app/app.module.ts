@@ -16,6 +16,7 @@ import { PdfComponent } from './students/pdf/pdf.component';
 import { StudentsAttendenceComponent } from './Forms/students-attendence/students-attendence.component';
 import { AttendenceComponent } from './Forms/attendence/attendence.component';
 import { FeeComponent } from './Forms/fee/fee.component';
+import { AttendenceDetailsComponent } from './Forms/attendence-details/attendence-details.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { FeeComponent } from './Forms/fee/fee.component';
     PdfComponent,
     StudentsAttendenceComponent,
     AttendenceComponent,
-    FeeComponent
+    FeeComponent,
+    AttendenceDetailsComponent
   ],
   imports: [
     BrowserModule,

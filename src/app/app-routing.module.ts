@@ -9,6 +9,7 @@ import { PdfComponent } from './students/pdf/pdf.component';
 import { StudentsAttendenceComponent } from './Forms/students-attendence/students-attendence.component';
 import { AttendenceComponent } from './Forms/attendence/attendence.component';
 import { FeeComponent } from './Forms/fee/fee.component';
+import { AttendenceDetailsComponent } from './Forms/attendence-details/attendence-details.component';
 
 const routes: Routes = [{
    path: '', component: LoginComponent} ,
@@ -20,11 +21,7 @@ const routes: Routes = [{
     { path: 'dashboard/student/attendence', component: StudentsAttendenceComponent },
     { path: 'dashboard/student/attendence-form', component: AttendenceComponent },
     { path: 'dashboard/student/fee', component: FeeComponent },
-
-
-    
-
-
+    { path: 'dashboard/attendence-edit/:id', component: AttendenceDetailsComponent },
 
 ];
 @NgModule({

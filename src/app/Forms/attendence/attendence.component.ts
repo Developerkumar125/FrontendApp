@@ -46,7 +46,6 @@ submitted = false
       
 
     };
-    console.log(data,"ssss")
 
     this.studentsService.addAttendence(data)
       .subscribe(

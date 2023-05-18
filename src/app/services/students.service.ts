@@ -60,12 +60,21 @@ deleteAll(): Observable<any> {
   getAllAttendence(): Observable<Attendence[]> {
   return this.http.get<Attendence[]>(`${baseUrl2}/list`);
 }
+  getByIdAttendence(id:any): Observable<Attendence> {
+  return this.http.get<Attendence>(`${baseUrl2}/${id}`);
+
+}
+
+
   getAllAttendanceBasedonDate(date: any): Observable<Attendence[]> {
   return this.http.get<Attendence[]>(`${baseUrl2}/list?date=${date}`);
 }
 
   addAttendence(data:any): Observable<Attendence[]> {
   return this.http.post<Attendence[]>(baseUrl2, data);
+}
+updateAttedene(id: any, data: any):Observable<any>{
+  return this.http.put<any>(`${baseUrl2}/${id}`,data)
 }
 getFeeList():Observable<FeeDetails[]>{
   return this.http.get<FeeDetails[]>(`${baseUr3}/list`)
