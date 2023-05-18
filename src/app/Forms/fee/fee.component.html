@@ -211,7 +211,9 @@
                     <tr>
                       <th>Student ID</th>
                       <th>Date</th>
-                      <th>Status</th>
+                      <th>Amount</th>
+                      <th>mode by</th>
+                      <th>status</th>
                       <th>Edit</th>
                       <th>Delete</th>
                  
@@ -225,13 +227,15 @@
 <td>{{feeCollections.student_id}}</td>
 <td>{{feeCollections.date}}</td>
 <td>{{feeCollections.amount}}</td>
+<td>1</td>
+<td>done</td>
 
 
     <td><i class="fa fa-fw fa-edit" style="width: 10px;" routerLink="/dashboard/students-edit"></i></td>
 
                       <td>
 
-                        <i class="fas fa-trash-alt" style="width: 10px;"   ></i></td>
+                        <i class="fas fa-trash-alt" style="width: 10px;" aria-disabled="true"  ></i></td>
 
                     </tr>
                   
